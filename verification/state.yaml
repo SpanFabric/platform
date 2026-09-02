@@ -3,11 +3,11 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "INDEPENDENT_REVIEW_PENDING",
-  "previous_status": "BUILDING",
+  "status": "BUILDING",
+  "previous_status": "INDEPENDENT_REVIEW_PENDING",
   "transition": {
-    "from": "BUILDING",
-    "to": "INDEPENDENT_REVIEW_PENDING",
+    "from": "INDEPENDENT_REVIEW_PENDING",
+    "to": "BUILDING",
     "authority": "BUILDER"
   },
   "risk": {
@@ -39,7 +39,7 @@
       "review_subject_digest": "6dfc8d7d7a6d682abba1bcc56af214fed1195d8bd97be4217ac06d420720b0c7",
       "created_at": "2026-09-02T19:35:28Z",
       "verdict": "BUILDER_GREEN",
-      "active": true
+      "active": false
     },
     {
       "id": "BOOTSTRAP-BRIDGE-REPAIR-BUILDER-20260902",
