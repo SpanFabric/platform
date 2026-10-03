@@ -99,7 +99,7 @@
       "review_subject_digest": "a389d70b4d4370261505f41e886be2fbcaafa85c1a72ea83e088607ef1aa01e5",
       "created_at": "2026-10-03T21:34:11.7812585+02:00",
       "verdict": "BUILDER_GREEN",
-      "active": true,
+      "active": false,
       "report_path": "verification/reports/SOLO_OWNER_GOVERNANCE_BUILDER_20261003.json"
     },
     {
@@ -114,7 +114,7 @@
       "verdict": "FINDINGS",
       "severity": "HIGH",
       "finding_id": "WINDOWS_TRUSTED_RUNNER_HOST_SELECTION",
-      "active": true,
+      "active": false,
       "report_path": "verification/reports/FRESH_BREAKER_WINDOWS_TRUSTED_RUNNER_HOST_SELECTION_20261003.json"
     }
   ],
