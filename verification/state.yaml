@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "INDEPENDENT_REVIEW_PENDING",
-  "previous_status": "BUILDING",
+  "status": "BUILDING",
+  "previous_status": "INDEPENDENT_REVIEW_PENDING",
   "transition": {
-    "from": "BUILDING",
-    "to": "INDEPENDENT_REVIEW_PENDING",
+    "from": "INDEPENDENT_REVIEW_PENDING",
+    "to": "BUILDING",
     "authority": "BUILDER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "d2eea8950925dbe76a2b9427895d8a13a1a66f00fdd55d038e1b94a8ae6b2860",
-  "review_subject_commit": "956fefe9d883ba38814db126bc90bf1eddcb4d1b",
+  "review_subject_digest": "",
+  "review_subject_commit": "",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -39,7 +39,7 @@
       "review_subject_digest": "d2eea8950925dbe76a2b9427895d8a13a1a66f00fdd55d038e1b94a8ae6b2860",
       "created_at": "2026-09-03T08:28:02Z",
       "verdict": "BUILDER_GREEN",
-      "active": true
+      "active": false
     },
     {
       "id": "CI-HISTORY-BUILDER-20260902",
