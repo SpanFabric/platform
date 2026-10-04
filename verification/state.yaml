@@ -3,12 +3,12 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "READY_FOR_OWNER_ACCEPTANCE",
-  "previous_status": "INDEPENDENT_REVIEW_PENDING",
+  "status": "ACCEPTED",
+  "previous_status": "READY_FOR_OWNER_ACCEPTANCE",
   "transition": {
-    "from": "INDEPENDENT_REVIEW_PENDING",
-    "to": "READY_FOR_OWNER_ACCEPTANCE",
-    "authority": "FRESH_BREAKER"
+    "from": "READY_FOR_OWNER_ACCEPTANCE",
+    "to": "ACCEPTED",
+    "authority": "OWNER"
   },
   "risk": {
     "class": "R2",
@@ -194,6 +194,19 @@
       "verdict": "ACCEPTED",
       "active": true,
       "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json"
+    },
+    {
+      "id": "OWNER-ACCEPTANCE-SOLO-OWNER-PLATFORM-20261004",
+      "type": "ACCEPTANCE",
+      "producer": "OWNER",
+      "role": "OWNER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+      "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+      "created_at": "2026-10-04T17:56:06+02:00",
+      "verdict": "ACCEPTED",
+      "active": true,
+      "report_path": "verification/reports/OWNER_ACCEPTANCE_SOLO_OWNER_20261004.json"
     }
   ],
   "remediation_inputs": [
