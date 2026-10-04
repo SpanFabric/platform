@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "BUILDING",
-  "previous_status": "BREAKER_FAILED",
+  "status": "INDEPENDENT_REVIEW_PENDING",
+  "previous_status": "BUILDING",
   "transition": {
-    "from": "BREAKER_FAILED",
-    "to": "BUILDING",
+    "from": "BUILDING",
+    "to": "INDEPENDENT_REVIEW_PENDING",
     "authority": "BUILDER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "c52830149dc99491517ccddf1559550d87ada7e8e8c82550982231d9bddbd729",
-  "review_subject_commit": "6761c585e9700a407de9b2d87dbfab1f9fc48053",
+  "review_subject_digest": "bc6dc4d3d09fb4dcb2ae0f42adb2393d51e3f18128035b7da4754376d87fd983",
+  "review_subject_commit": "5a0faabfadecf49c7b38450d88ff21e9d32cb634",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -142,6 +142,19 @@
       "verdict": "FINDINGS",
       "active": false,
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json"
+    },
+    {
+      "id": "FBR-WTR-001-002-003-REMEDIATION-BUILDER-PLATFORM-20261004",
+      "type": "REMEDIATION",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "5a0faabfadecf49c7b38450d88ff21e9d32cb634",
+      "review_subject_digest": "bc6dc4d3d09fb4dcb2ae0f42adb2393d51e3f18128035b7da4754376d87fd983",
+      "created_at": "2026-10-04T00:20:16Z",
+      "verdict": "BUILDER_GREEN",
+      "active": true,
+      "report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
     }
   ],
   "remediation_inputs": [
@@ -183,7 +196,9 @@
       "status": "OPEN",
       "scope": "CROSS_REPOSITORY_TRUST_BOUNDARY",
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
-      "summary": "WSL-only PATH fallback is accepted"
+      "summary": "WSL-only PATH fallback is accepted",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
     },
     {
       "id": "FBR-WTR-002",
@@ -192,7 +207,9 @@
       "status": "OPEN",
       "scope": "CROSS_REPOSITORY_TRUST_BOUNDARY",
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
-      "summary": "Public verification-gate is skipped rather than failed after Windows prerequisite failure"
+      "summary": "Public verification-gate is skipped rather than failed after Windows prerequisite failure",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
     },
     {
       "id": "FBR-WTR-003",
@@ -201,7 +218,9 @@
       "status": "OPEN",
       "scope": "SHARED_WINDOWS_CONVERSION_BOUNDARY",
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
-      "summary": "Apostrophe-containing native Windows paths are silently altered"
+      "summary": "Apostrophe-containing native Windows paths are silently altered",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
     }
   ],
   "initial_baseline_bootstrap": {
@@ -213,6 +232,7 @@
   "notes": [
     "The first main commit contains the Manual Verification Bridge and is the explicit bootstrap baseline.",
     "The confirmed external Fresh BREAKER findings F-001 through F-004 remain historical remediation input.",
-    "F-005 and F-006 have Builder remediation and technical evidence only; a new independent Fresh BREAKER is required."
+    "F-005 and F-006 have Builder remediation and technical evidence only; a new independent Fresh BREAKER is required.",
+    "FBR-WTR-001/002/003 have Builder remediation bound to the new material subject. Their historical Breaker report is unchanged and inactive; findings remain OPEN pending a new independent Fresh Breaker."
   ]
 }
