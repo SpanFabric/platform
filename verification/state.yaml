@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "INDEPENDENT_REVIEW_PENDING",
-  "previous_status": "BUILDING",
+  "status": "ACCEPTED",
+  "previous_status": "READY_FOR_OWNER_ACCEPTANCE",
   "transition": {
-    "from": "BUILDING",
-    "to": "INDEPENDENT_REVIEW_PENDING",
-    "authority": "BUILDER"
+    "from": "READY_FOR_OWNER_ACCEPTANCE",
+    "to": "ACCEPTED",
+    "authority": "OWNER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "f1225c968c511fbb610a2fd3d7314f3859850a76c12dd2c695308a5bd978932f",
-  "review_subject_commit": "INITIAL_BASELINE_BOOTSTRAP_SELF",
+  "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+  "review_subject_commit": "42f80f11eebc94d3e536596f8f0268cc57503210",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -27,10 +27,290 @@
       "review_subject_digest": "f1225c968c511fbb610a2fd3d7314f3859850a76c12dd2c695308a5bd978932f",
       "created_at": "2026-09-02T19:16:15Z",
       "verdict": "BUILDER_GREEN",
-      "active": true
+      "active": false
+    },
+    {
+      "id": "F005-F006-TRUSTED-RUNNER-BUILDER-20260903",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "956fefe9d883ba38814db126bc90bf1eddcb4d1b",
+      "review_subject_digest": "d2eea8950925dbe76a2b9427895d8a13a1a66f00fdd55d038e1b94a8ae6b2860",
+      "created_at": "2026-09-03T08:28:02Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false
+    },
+    {
+      "id": "CI-HISTORY-BUILDER-20260902",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "e670e9b99dc955ff542efd7845ab715a193d4c8b",
+      "review_subject_digest": "6dfc8d7d7a6d682abba1bcc56af214fed1195d8bd97be4217ac06d420720b0c7",
+      "created_at": "2026-09-02T19:35:28Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false
+    },
+    {
+      "id": "BOOTSTRAP-BRIDGE-REPAIR-BUILDER-20260902",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "aea1986b0be4671cf1cb61c48308f40448b0311e",
+      "review_subject_digest": "c5ab97cdfe8dc92b4d4c04b4ddea49ebf3a49bcd88dd0bc3fe1279293bf0c065",
+      "created_at": "2026-09-02T19:27:12Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false
+    },
+    {
+      "id": "FRESH-BREAKER-F001-F004-REMEDIATION-BUILDER-20260902",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "dd99b999ca9f98e93eb26a00cbc52c3161d47bd7",
+      "review_subject_digest": "687c9d5a7a57fc71165188229782ef56314e3b0ebd84c9b92f612c359cb86c5d",
+      "created_at": "2026-09-02T20:44:07Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false
+    },
+    {
+      "id": "FRESH-BREAKER-F001-F004-REMEDIATION-BUILDER-FOLLOWUP-20260902",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "cc5d2309fe0c6c0d820fcfecfd619f043e98354c",
+      "review_subject_digest": "8cae1111e0f0e162401b133540c76b0735898fb5e06533c6f295af8ecf0572bf",
+      "created_at": "2026-09-02T20:57:45Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false
+    },
+    {
+      "id": "SOLO-OWNER-GOVERNANCE-BUILDER-20261003",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "04c960d55e84927d6d54d14b58079903dff14a48",
+      "review_subject_digest": "a389d70b4d4370261505f41e886be2fbcaafa85c1a72ea83e088607ef1aa01e5",
+      "created_at": "2026-10-03T21:34:11.7812585+02:00",
+      "verdict": "BUILDER_GREEN",
+      "active": false,
+      "report_path": "verification/reports/SOLO_OWNER_GOVERNANCE_BUILDER_20261003.json"
+    },
+    {
+      "id": "FRESH-BREAKER-WINDOWS-TRUSTED-RUNNER-HOST-SELECTION-PLATFORM-20261003",
+      "type": "BREAKER_VERDICT",
+      "producer": "FRESH_BREAKER",
+      "role": "FRESH_BREAKER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "04c960d55e84927d6d54d14b58079903dff14a48",
+      "review_subject_digest": "a389d70b4d4370261505f41e886be2fbcaafa85c1a72ea83e088607ef1aa01e5",
+      "created_at": "2026-10-03T23:17:28.3510389+02:00",
+      "verdict": "FINDINGS",
+      "severity": "HIGH",
+      "finding_id": "WINDOWS_TRUSTED_RUNNER_HOST_SELECTION",
+      "active": false,
+      "report_path": "verification/reports/FRESH_BREAKER_WINDOWS_TRUSTED_RUNNER_HOST_SELECTION_20261003.json"
+    },
+    {
+      "id": "WINDOWS-TRUSTED-RUNNER-HOST-SELECTION-BUILDER-PLATFORM-20261004",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "6761c585e9700a407de9b2d87dbfab1f9fc48053",
+      "review_subject_digest": "c52830149dc99491517ccddf1559550d87ada7e8e8c82550982231d9bddbd729",
+      "created_at": "2026-10-04T00:14:41.1492124+02:00",
+      "verdict": "BUILDER_GREEN",
+      "active": false,
+      "report_path": "verification/reports/WINDOWS_TRUSTED_RUNNER_HOST_SELECTION_BUILDER_20261004.json"
+    },
+    {
+      "id": "FRESH-BREAKER-WTR-001-002-003-PLATFORM-20261004",
+      "type": "BREAKER_VERDICT",
+      "producer": "FRESH_BREAKER",
+      "role": "FRESH_BREAKER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "6761c585e9700a407de9b2d87dbfab1f9fc48053",
+      "review_subject_digest": "c52830149dc99491517ccddf1559550d87ada7e8e8c82550982231d9bddbd729",
+      "created_at": "2026-10-04T01:16:39.4629153+02:00",
+      "verdict": "FINDINGS",
+      "active": false,
+      "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json"
+    },
+    {
+      "id": "FBR-WTR-001-002-003-REMEDIATION-BUILDER-PLATFORM-20261004",
+      "type": "REMEDIATION",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "5a0faabfadecf49c7b38450d88ff21e9d32cb634",
+      "review_subject_digest": "bc6dc4d3d09fb4dcb2ae0f42adb2393d51e3f18128035b7da4754376d87fd983",
+      "created_at": "2026-10-04T00:20:16Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false,
+      "report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
+    },
+    {
+      "id": "FBR-WTR-001-002-003-REMEDIATION-BUILDER-CI-FOLLOWUP-PLATFORM-20261004",
+      "type": "REMEDIATION",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "7b1df0406190af0bbf971b8c9f458a82d2f6d6d0",
+      "review_subject_digest": "2aab773b97df1e8c9e1f9539d298937edc852356aa2fedd53f7188ee9bb82778",
+      "created_at": "2026-10-04T00:35:14.787Z",
+      "verdict": "BUILDER_GREEN",
+      "active": false,
+      "report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_CI_FOLLOWUP_20261004.json"
+    },
+    {
+      "id": "FBR-WTR-001-POSITIVE-PATH-FALLBACK-BUILDER-PLATFORM-20261004",
+      "type": "REMEDIATION",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+      "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+      "created_at": "2026-10-04T07:08:07Z",
+      "verdict": "BUILDER_GREEN",
+      "active": true,
+      "report_path": "verification/reports/FBR_WTR_001_POSITIVE_PATH_FALLBACK_BUILDER_20261004.json"
+    },
+    {
+      "id": "FRESH-BREAKER-FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-PLATFORM-20261004",
+      "type": "BREAKER_VERDICT",
+      "producer": "FRESH_BREAKER",
+      "role": "FRESH_BREAKER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+      "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+      "created_at": "2026-10-04T12:54:53Z",
+      "verdict": "ACCEPTED",
+      "active": true,
+      "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json"
+    },
+    {
+      "id": "OWNER-ACCEPTANCE-SOLO-OWNER-PLATFORM-20261004",
+      "type": "ACCEPTANCE",
+      "producer": "OWNER",
+      "role": "OWNER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+      "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+      "created_at": "2026-10-04T17:56:06+02:00",
+      "verdict": "ACCEPTED",
+      "active": true,
+      "report_path": "verification/reports/OWNER_ACCEPTANCE_SOLO_OWNER_20261004.json"
     }
   ],
-  "blockers": [],
+  "remediation_inputs": [
+    {
+      "kind": "EXTERNAL_FRESH_BREAKER_FINDINGS",
+      "reference": "https://github.com/SpanFabric/platform/pull/1",
+      "findings": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004"
+      ],
+      "status": "REMEDIATED_PENDING_FRESH_BREAKER"
+    },
+    {
+      "kind": "EXTERNAL_FRESH_BREAKER_FINDINGS",
+      "reference": "https://github.com/SpanFabric/platform/pull/1",
+      "findings": [
+        "F-005",
+        "F-006"
+      ],
+      "status": "REMEDIATED_PENDING_FRESH_BREAKER"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "WINDOWS_TRUSTED_RUNNER_HOST_SELECTION",
+      "severity": "HIGH",
+      "confirmed": true,
+      "status": "VERIFIED",
+      "scope": "CROSS_REPOSITORY",
+      "report_path": "verification/reports/FRESH_BREAKER_WINDOWS_TRUSTED_RUNNER_HOST_SELECTION_20261003.json",
+      "summary": "Builder remediation is bound to material commit 6761c585e9700a407de9b2d87dbfab1f9fc48053; independent Fresh BREAKER remains required.",
+      "verification": {
+        "review_id": "FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004",
+        "evidence_id": "FRESH-BREAKER-FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-PLATFORM-20261004",
+        "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json",
+        "material_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+        "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+        "verdict": "ACCEPTED",
+        "authority": "FRESH_BREAKER"
+      }
+    },
+    {
+      "id": "FBR-WTR-001",
+      "severity": "HIGH",
+      "confirmed": true,
+      "status": "VERIFIED",
+      "scope": "CROSS_REPOSITORY_TRUST_BOUNDARY",
+      "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
+      "summary": "WSL-only PATH fallback is accepted",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_POSITIVE_PATH_FALLBACK_BUILDER_20261004.json",
+      "verification": {
+        "review_id": "FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004",
+        "evidence_id": "FRESH-BREAKER-FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-PLATFORM-20261004",
+        "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json",
+        "material_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+        "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+        "verdict": "ACCEPTED",
+        "authority": "FRESH_BREAKER"
+      }
+    },
+    {
+      "id": "FBR-WTR-002",
+      "severity": "HIGH",
+      "confirmed": true,
+      "status": "VERIFIED",
+      "scope": "CROSS_REPOSITORY_TRUST_BOUNDARY",
+      "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
+      "summary": "Public verification-gate is skipped rather than failed after Windows prerequisite failure",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_POSITIVE_PATH_FALLBACK_BUILDER_20261004.json",
+      "verification": {
+        "review_id": "FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004",
+        "evidence_id": "FRESH-BREAKER-FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-PLATFORM-20261004",
+        "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json",
+        "material_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+        "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+        "verdict": "ACCEPTED",
+        "authority": "FRESH_BREAKER"
+      }
+    },
+    {
+      "id": "FBR-WTR-003",
+      "severity": "MEDIUM",
+      "confirmed": true,
+      "status": "VERIFIED",
+      "scope": "SHARED_WINDOWS_CONVERSION_BOUNDARY",
+      "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
+      "summary": "Apostrophe-containing native Windows paths are silently altered",
+      "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
+      "builder_report_path": "verification/reports/FBR_WTR_001_POSITIVE_PATH_FALLBACK_BUILDER_20261004.json",
+      "verification": {
+        "review_id": "FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004",
+        "evidence_id": "FRESH-BREAKER-FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-PLATFORM-20261004",
+        "report_path": "verification/reports/FRESH_BREAKER_FBR_WTR_001_POSITIVE_PATH_FALLBACK_FINAL_20261004.json",
+        "material_sha": "42f80f11eebc94d3e536596f8f0268cc57503210",
+        "review_subject_digest": "caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9",
+        "verdict": "ACCEPTED",
+        "authority": "FRESH_BREAKER"
+      }
+    }
+  ],
   "initial_baseline_bootstrap": {
     "kind": "INITIAL_BASELINE_BOOTSTRAP",
     "branch": "main",
@@ -39,6 +319,13 @@
   },
   "notes": [
     "The first main commit contains the Manual Verification Bridge and is the explicit bootstrap baseline.",
-    "This Builder result is not a Breaker, Specialist, Owner, or Acceptance verdict."
+    "The confirmed external Fresh BREAKER findings F-001 through F-004 remain historical remediation input.",
+    "F-005 and F-006 have Builder remediation and technical evidence only; a new independent Fresh BREAKER is required.",
+    "FBR-WTR-001/002/003 have Builder remediation bound to the new material subject. Their historical Breaker report is unchanged and inactive; findings remain OPEN pending a new independent Fresh Breaker.",
+    "Builder reopened for portable fixed-installation test fixture after Ubuntu CI exposed an environmental assumption; prior Builder report and failed CI remain historical.",
+    "Portable CI-fixture followup validated locally on the new material identity; prior evidence stays inactive, independent Fresh Breaker required.",
+    "Builder reopened solely to finalize FBR-WTR-001 positive Windows PATH suitability and matching manual text; historical reports remain immutable. No Owner, merge or PHASE-001 authority.",
+    "FBR-WTR-001 positive-suitability Windows PATH fallback and matching manual finalized on the new material subject. FBR-WTR-002 workflow and FBR-WTR-003 runtime preserved. Historical exact-output claim is superseded by new evidence showing /c/path'name/runner, without rewriting old reports. Earlier empty native conversion observations remain disclosed; all six require a new independent Fresh Breaker.",
+    "Owner-authorized append-only persistence of FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004: technical ACCEPTED bound to material 42f80f11eebc94d3e536596f8f0268cc57503210 and digest caaa93e1ca2897e4dad9cea96afebc1215cec4b0e640b3b2a78ed2291a9b24a9. Historical reports remain unchanged and historical failed Fresh BREAKER state evidence remains inactive. READY_FOR_OWNER_ACCEPTANCE is technical readiness only; hosting controls, Owner Acceptance, merge/post-merge, GATE-000 PASS, PHASE-000 completion and PHASE-001 authorization are not performed."
   ]
 }
