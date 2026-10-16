@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "BUILDING",
-  "previous_status": "ACCEPTED",
+  "status": "INDEPENDENT_REVIEW_PENDING",
+  "previous_status": "BUILDING",
   "transition": {
-    "from": "ACCEPTED",
-    "to": "BUILDING",
+    "from": "BUILDING",
+    "to": "INDEPENDENT_REVIEW_PENDING",
     "authority": "BUILDER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "",
-  "review_subject_commit": "",
+  "review_subject_digest": "e616ab259b21cdd5071c25599f123057edf2aaa430e8611797af2738d69bd576",
+  "review_subject_commit": "3ecf11112b5b0ca25b2a073ce168d4182ed20db8",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -207,6 +207,19 @@
       "verdict": "ACCEPTED",
       "active": false,
       "report_path": "verification/reports/OWNER_ACCEPTANCE_SOLO_OWNER_20261004.json"
+    },
+    {
+      "id": "VERIFICATION-GATE-FIRST-PUSH-REMEDIATION-BUILDER-PLATFORM-20261016",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "verdict": "BUILDER_GREEN",
+      "commit_sha": "3ecf11112b5b0ca25b2a073ce168d4182ed20db8",
+      "review_subject_digest": "e616ab259b21cdd5071c25599f123057edf2aaa430e8611797af2738d69bd576",
+      "created_at": "2026-10-16T12:22:43.540835+00:00",
+      "active": true,
+      "report_path": "verification/reports/VERIFICATION_GATE_FIRST_PUSH_REMEDIATION_BUILDER_20261016.json"
     }
   ],
   "remediation_inputs": [
