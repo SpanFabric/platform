@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "id": "MISSING-PARENT-FIXTURE-BUILDER-PLATFORM-20261022",
+  "type": "BUILDER_REPORT",
+  "producer": "BUILDER",
+  "role": "BUILDER",
+  "authority": "MANUAL_AUTHORITY",
+  "verdict": "BUILDER_GREEN",
+  "created_at": "2026-10-22T16:06:50.925582+00:00",
+  "repository": "SpanFabric/platform",
+  "base_sha": "459cc37e358cd68887491e6fcb58a0b98e01678f",
+  "commit_sha": "afabb588eebeba81f61c259c8b55783e9f8558f4",
+  "review_subject_digest": "6ea1cfe40e38ff88e86988a3e4125e1eea9e9a659a9744f15b4c2eccd7924ab4",
+  "changed_material_paths": [
+    "tests/verification/test_lifecycle_history.py"
+  ],
+  "root_cause": "Old test renamed an assumed loose parent-object path; explicit GC proves valid packed parent remains readable but that file is absent, causing setup FileNotFoundError.",
+  "historical_failed_run": "https://github.com/SpanFabric/.github/actions/runs/39800181504",
+  "implementation": "Git-plumbing paired valid/corrupt raw commits with same tree, index, policy and evidence. Existing immediate parent passes authoritative base guard; exact absent grandparent is encountered only by complete history traversal. Three storage layouts: loose, git gc, repack/prune-packed. Direct and immutable runner must fail with exact history diagnostic. Valid tip passes before and after while malformed objects remain unreachable.",
+  "git_commit_graph_semantics": "GC may produce rev-list exit0 with missing-object stderr and a partial traversal; test independently proves missing SHA and no root, then requires current validator incomplete-root rejection. No generic nonzero fallback.",
+  "tests": {
+    "full_native_linux": {
+      "repo": "platform",
+      "exit": 0,
+      "duration_seconds": 30.678,
+      "summary": [
+        "Ran 98 tests in 30.491s",
+        "OK (skipped=6)"
+      ],
+      "source_hashes": {
+        "tests/verification/test_lifecycle_history.py": "d77e182c3feebe75fb3cf33f887d8c3f55fbcd004cd30f60a879c09fde733599",
+        "verification/state.yaml": "69e55a42d174afbb3b795411c40172c27430885d5fe2eb342119690b38d74faf"
+      },
+      "tested_base": "459cc37e358cd68887491e6fcb58a0b98e01678f",
+      "material_delta": [
+        "tests/verification/test_lifecycle_history.py"
+      ],
+      "runtime": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "git": "git version 2.43.0"
+    },
+    "native_windows_focused_shared_source": {
+      "repository_executed": "platform",
+      "tests": 3,
+      "exit": 0,
+      "source_sha256": "d77e182c3feebe75fb3cf33f887d8c3f55fbcd004cd30f60a879c09fde733599",
+      "applicability": "identical shared test bytes across all six; per-repository full native Windows coverage is required by ensuing exact-head PR CI"
+    },
+    "immutable_trusted_runner_exit": 0,
+    "direct_validator_exit": 0,
+    "git_diff_check_exit": 0,
+    "source_binding": "Full local suites executed current base plus this exact one-file material delta before commit; committed source SHA256 verified equal. Metadata state is excluded; exact final-head CI remains required."
+  },
+  "assumption_challenge": {
+    "old_packed_bug": "REPRODUCED_FileNotFoundError",
+    "three_real_storage_cases": [
+      "loose",
+      "gc: loose_count0 and in_pack>0",
+      "repack+prune-packed: loose_count0 and in_pack>0"
+    ],
+    "causal_controls": "Valid paired tip passes direct/trusted before and after ref-only corruption; malformed unreachable objects retained for final positive control",
+    "negative_execution": "Direct and immutable runner each exit2; base ancestry guard is separately proven successful; full Git walk proves exact missing SHA. Runtime rejection must match either failing rev-list or proven incomplete-root diagnostic, never generic failure.",
+    "gc_acceleration": {
+      "environment": "git2.55.0.windows.3",
+      "storage": "manual git gc --prune=now",
+      "observed_with_commit_graph": {
+        "merge_base_head_head_exit": 0,
+        "rev_list_exit": 0,
+        "rev_list_stderr": "error: Could not read bb31ad2d9e9e336c8cacd55140edd0e159dd32d9",
+        "rev_list_root_count": 0,
+        "missing_parent_oid": "bb31ad2d9e9e336c8cacd55140edd0e159dd32d9",
+        "cat_file_missing_exit": 1
+      },
+      "observed_with_core_commitGraph_false": {
+        "merge_base_head_head_exit": 0,
+        "rev_list_exit": 128,
+        "rev_list_stderr_contains_missing_oid": true
+      },
+      "test_contract": "Independent Git proof determines the exact history rejection expected; no generic nonzero/error fallback and no production-validator change."
+    },
+    "no_loose_file_manipulation": true,
+    "no_runtime_changes": true,
+    "active_old_acceptance_reuse": false,
+    "known_limit": "These are fixture/history checks, not GPU or product proof; Builder has no independent/Owner authority."
+  },
+  "shared_consistency": {
+    "changed_file": "tests/verification/test_lifecycle_history.py",
+    "new_source_sha256": "d77e182c3feebe75fb3cf33f887d8c3f55fbcd004cd30f60a879c09fde733599",
+    "all_six_identical": true,
+    "other_material_entries_unchanged": true,
+    "protected_invariants": [
+      "validator full-history and shallow handling",
+      "immutable trusted launcher",
+      "closed authority matrix",
+      "first-push PR/main trigger and all-zero rejection"
+    ],
+    "full_local_tests": 634,
+    "native_focused_tests": 3
+  },
+  "artifact_sha256": {
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/linux-suite.log": "3b5be81e1e168cf51afd6cf4417aeb04a87954c794ef366ff9100656aeb10f8b",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/native-focused-shared.log": "db04813f6c7be66e2ddf2a637deacc0fdcb7f17f7217a4a171e49cfa82850012",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/original-packed-failure.json": "96aff1f05360bc54cc8f9881589ae682de7db7c5a79cae8dde3031eeb2292475",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/assumption-challenge.json": "23e080b4ece3fe8d8b4bed693310574cb94eac85bc033cc071e191b34ab6ef4c",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/shared-consistency.json": "df40980ab13bac16259e5c897c0415ad67169ff0489c803dc5f646b5db403143",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/material-trusted.log": "e852e48bd8d697b5c6edf6d922a513234d0c96dec057e3740869a7e162964eab",
+    "verification/reports/MISSING_PARENT_FIXTURE_20261022/material-direct.log": "31431fb7675e8f23e69bca14716c7ef9bd854a5507df687aea6433529527d82e"
+  },
+  "development_attempts": [
+    "Initial immediate-missing-parent graph was rejected by earlier ancestor guard; corrected with valid outer commit.",
+    "Initial assumption rev-list must always return nonzero after GC was disproven; explicit missing-SHA/partial-root proof now selects the exact existing history rejection. Logs retained outside repository."
+  ],
+  "known_limitations": [
+    "No Fresh Breaker performed; MISSING-PARENT-FIXTURE-001 remains OPEN pending independent review.",
+    "No Owner acceptance, merge, post-merge lifecycle persistence, UP-003, old persistence attempts, migration, gate PASS or phase authorization."
+  ],
+  "lifecycle": "INDEPENDENT_REVIEW_PENDING"
+}
