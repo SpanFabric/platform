@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "id": "OWNER-ACCEPTANCE-MISSING-PARENT-FIXTURE-PLATFORM-20261026",
+  "type": "ACCEPTANCE",
+  "producer": "OWNER",
+  "role": "OWNER",
+  "authority": "MANUAL_AUTHORITY",
+  "owner": "severinafrancic",
+  "persisted_by": "Codex acting on explicit Owner instruction; not independent review or cryptographic identity proof",
+  "created_at": "2026-10-26T03:02:33.618401+00:00",
+  "verdict": "ACCEPTED",
+  "repository": "SpanFabric/platform",
+  "pr": 5,
+  "accepted_pr_head": "cc73774cce20d9d0c058b3b06c798e2afdcd7723",
+  "commit_sha": "afabb588eebeba81f61c259c8b55783e9f8558f4",
+  "review_subject_digest": "6ea1cfe40e38ff88e86988a3e4125e1eea9e9a659a9744f15b4c2eccd7924ab4",
+  "fresh_breaker_report": {
+    "path": "verification/reports/MISSING_PARENT_FIXTURE_FRESH_BREAKER_20261022/report.json",
+    "sha256": "a288ca71cd34a0832d596d8880a0c1e1c8a22b5d3abcd2d53864174866136028",
+    "verdict": "FRESH_BREAKER_ACCEPTED"
+  },
+  "authorization": "Explicit Owner instruction in this task: recheck exact heads, READY, active valid Fresh Breaker evidence, unchanged material, green CI; persist READY_FOR_OWNER_ACCEPTANCE -> ACCEPTED by OWNER; normal metadata-only push followed by exact-new-head CI; no merge, material edits, UP-003, failed persistence PRs, migration, or gate/phase advancement.",
+  "pre_acceptance_checks": {
+    "verification-gate": [
+      {
+        "id": 120000328750,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/platform/actions/runs/39828248224/job/120000328750"
+      }
+    ],
+    "bootstrap-integrity": [
+      {
+        "id": 119997188638,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/platform/actions/runs/39828248380/job/119997188638"
+      }
+    ],
+    "windows-trusted-runner": [
+      {
+        "id": 119997188369,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/platform/actions/runs/39828248224/job/119997188369"
+      }
+    ]
+  },
+  "transition": {
+    "from": "READY_FOR_OWNER_ACCEPTANCE",
+    "to": "ACCEPTED",
+    "authority": "OWNER"
+  },
+  "kit_archive_state": "PENDING_DEBT; all Kit-specific gates suspended by explicit Owner instruction; no Kit invocation or upload",
+  "limitations": [
+    "MANUAL_AUTHORITY; no cryptographic human-identity assertion",
+    "New metadata-head CI is a separate required observation after normal push",
+    "Owner acceptance does not grant merge or phase/gate advancement"
+  ],
+  "merge_performed": false,
+  "migration_started": false
+}
