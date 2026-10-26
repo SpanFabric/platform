@@ -3,12 +3,12 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "platform",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "MERGED",
-  "previous_status": "ACCEPTED",
+  "status": "POST_MERGE_VERIFIED",
+  "previous_status": "MERGED",
   "transition": {
-    "from": "ACCEPTED",
-    "to": "MERGED",
-    "authority": "MERGE_HOSTING_GATE"
+    "from": "MERGED",
+    "to": "POST_MERGE_VERIFIED",
+    "authority": "POST_MERGE_WORKFLOW"
   },
   "risk": {
     "class": "R2",
@@ -314,6 +314,20 @@
       "review_subject_digest": "6ea1cfe40e38ff88e86988a3e4125e1eea9e9a659a9744f15b4c2eccd7924ab4",
       "active": true,
       "report_path": "verification/reports/MERGE_STATE_MISSING_PARENT_FIXTURE_20261026.json"
+    },
+    {
+      "id": "POST_MERGE_VERIFICATION-MISSING-PARENT-FIXTURE-PLATFORM-20261026",
+      "type": "POST_MERGE_VERIFICATION",
+      "producer": "POST_MERGE_WORKFLOW",
+      "role": "POST_MERGE_WORKFLOW",
+      "authority": "MANUAL_AUTHORITY",
+      "created_at": "2026-10-26T08:01:03.440939+00:00",
+      "verdict": "PASS",
+      "commit_sha": "688b37d4bdda175606f6da9a62564f5d6034ea90",
+      "merge_commit_sha": "688b37d4bdda175606f6da9a62564f5d6034ea90",
+      "review_subject_digest": "6ea1cfe40e38ff88e86988a3e4125e1eea9e9a659a9744f15b4c2eccd7924ab4",
+      "active": true,
+      "report_path": "verification/reports/POST_MERGE_VERIFICATION_MISSING_PARENT_FIXTURE_20261026.json"
     }
   ],
   "remediation_inputs": [
